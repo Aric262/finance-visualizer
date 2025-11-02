@@ -21,6 +21,10 @@ export default function BudgetForm({ refresh }: { refresh: boolean }) {
 
     await fetch("/api/budgets", {
       method: "POST",
+<<<<<<< HEAD
+=======
+      headers: { "Content-Type": "application/json" },
+>>>>>>> 67e2183 (Clean fixes and resolved issues for Nov 02)
       body: JSON.stringify({
         category,
         amount: Number(amount),
@@ -35,21 +39,36 @@ export default function BudgetForm({ refresh }: { refresh: boolean }) {
   if (!currentMonth) return null; // or return a skeleton/loader
 
   return (
+<<<<<<< HEAD
     <div className="bg-white rounded-lg shadow-md p-6">
       <div className="flex items-center gap-2 mb-4">
         <Wallet className="text-green-600" />
         <h3 className="text-lg font-semibold text-gray-800">Set Monthly Budget</h3>
+=======
+    <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
+      <div className="flex items-center gap-2 mb-4">
+        <Wallet className="text-green-600 dark:text-green-400" />
+        <h3 className="text-lg font-semibold text-gray-800 dark:text-white">Set Monthly Budget</h3>
+>>>>>>> 67e2183 (Clean fixes and resolved issues for Nov 02)
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
+<<<<<<< HEAD
           <label className="block text-sm font-medium text-gray-700 mb-1">
+=======
+          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+>>>>>>> 67e2183 (Clean fixes and resolved issues for Nov 02)
             Category
           </label>
           <select
             value={category}
             onChange={(e) => setCategory(e.target.value)}
+<<<<<<< HEAD
             className="w-full p-2 border border-gray-300 rounded focus:ring-2 focus:ring-green-500"
+=======
+            className="w-full p-2 border border-gray-300 dark:border-gray-600 rounded focus:ring-2 focus:ring-green-500 dark:bg-gray-700 dark:text-white"
+>>>>>>> 67e2183 (Clean fixes and resolved issues for Nov 02)
           >
             {categories.map((cat) => (
               <option key={cat} value={cat}>
@@ -60,7 +79,11 @@ export default function BudgetForm({ refresh }: { refresh: boolean }) {
         </div>
 
         <div>
+<<<<<<< HEAD
           <label className="block text-sm font-medium text-gray-700 mb-1">
+=======
+          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+>>>>>>> 67e2183 (Clean fixes and resolved issues for Nov 02)
             Budget Amount (₹)
           </label>
           <input
@@ -68,7 +91,11 @@ export default function BudgetForm({ refresh }: { refresh: boolean }) {
             placeholder="e.g., 5000"
             value={amount}
             onChange={(e) => setAmount(e.target.value)}
+<<<<<<< HEAD
             className="w-full p-2 border border-gray-300 rounded focus:ring-2 focus:ring-green-500"
+=======
+            className="w-full p-2 border border-gray-300 dark:border-gray-600 rounded focus:ring-2 focus:ring-green-500 dark:bg-gray-700 dark:text-white"
+>>>>>>> 67e2183 (Clean fixes and resolved issues for Nov 02)
           />
         </div>
 

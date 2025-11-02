@@ -2,7 +2,18 @@
 
 :root {
   --background: #ffffff;
+<<<<<<< HEAD
   /* --foreground: #171717; */
+=======
+  --sidebar-bg: #ffffff;
+  --sidebar-border: #e5e7eb;
+}
+
+:root.dark {
+  --background: #111827;
+  --sidebar-bg: #1f2937;
+  --sidebar-border: #374151;
+>>>>>>> 67e2183 (Clean fixes and resolved issues for Nov 02)
 }
 
 @theme inline {
@@ -12,6 +23,7 @@
   --font-mono: var(--font-geist-mono);
 }
 
+<<<<<<< HEAD
 @media (prefers-color-scheme: light) {
   :root {
     --background: #ededed;
@@ -23,5 +35,10 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+=======
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  transition: background-color 0.2s ease-in-out;
+>>>>>>> 67e2183 (Clean fixes and resolved issues for Nov 02)
 }
 
